@@ -2,7 +2,7 @@ const stylesheet = document.createElement('link')
 stylesheet.rel = 'stylesheet'
 stylesheet.href = new URL('./style.css', import.meta.url).href
 document.head.append(stylesheet)
-const assetBase = import.meta.env?.BASE_URL ?? '../'
+const assetBase = import.meta.env?.BASE_URL ?? './'
 
 document.querySelector('#app').innerHTML = `
 <header class="site-header"><a class="brand" href="#top" aria-label="Aquara home"><span class="drop-mark">♢</span><span>AQUAURA</span></a><nav><a href="#story">Our story</a><a href="#services">Services</a><a href="#planet">Our planet</a><a href="#sizes">Sizes</a><a href="#contact">Contact</a></nav><button class="header-button quick-open" type="button">Order now <span>↗</span></button></header>
