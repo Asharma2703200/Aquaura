@@ -1,5 +1,7 @@
-import './style.css'
-
+const stylesheet = document.createElement('link')
+stylesheet.rel = 'stylesheet'
+stylesheet.href = new URL('./style.css', import.meta.url).href
+document.head.append(stylesheet)
 const assetBase = import.meta.env?.BASE_URL ?? '../'
 
 document.querySelector('#app').innerHTML = `
